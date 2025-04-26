@@ -1,0 +1,47 @@
+Candidate Task
+Feedback Collector
+Objective
+This task is designed to evaluate your ability to develop a complete, working microapplication with attention to user experience, frontend precision, backend logic, and
+deployment readiness. The focus is not on building something complex, but on how well you
+execute something simple with care, clarity, and professionalism.
+Scope of Work
+Develop a single-page feedback collector application. The purpose is to allow users to submit
+their name, email address, and a short feedback message. These feedback entries should be
+stored and retrievable through a basic admin view built into the same interface.
+This task must include both frontend and backend functionality, and the final result should
+be deployed online.
+Expectations
+Frontend
+Use React (with either Vite or Next.js)
+Clean, responsive layout
+Use of modern design patterns – minimalistic, well-aligned, visually intuitive
+Styling using Tailwind CSS or similar framework is preferred
+Include a clearly visible watermark in the footer with your name and submission info
+Form must include:
+Full Name (text input)
+Email (with basic validation)
+Feedback message (text area)
+Submit button with loading state
+Admin View
+Toggle button: “View Submitted Feedback”
+When clicked, display all collected feedbacks
+Feedback display should be styled (list or card layout – avoid raw JSON dumps)
+Backend
+A backend API or serverless function that performs the following:
+POST /submit-feedback: Accepts feedback and stores it
+GET /feedbacks: Returns all feedback entries
+You may use Netlify Functions, Firebase, Supabase, or JSON-based storage
+Hosting
+The frontend must be deployed on Netlify
+Backend can be part of Netlify Functions, or hosted elsewhere as long as it’s reachable
+Bonus (Optional but Encouraged)
+Mobile responsiveness across devices
+Timestamp for each submission
+Dark/light theme toggle
+Thoughtful transitions or micro animations
+Form-level validation with user-friendly messages
+Submission Requirements
+Netlify deployment link
+Public GitHub repository with clear commit history
+Proper README explaining the project structure, tech stack, and deployment steps
+Add Full Name - Watermark or credit included in the live version footer.
