@@ -70,6 +70,15 @@ export default function FeedbackForm() {
     }
   }, [isSubmitSuccessful]);
 
+  // Handle focus and blur for fields
+  const handleFocus = (fieldName: string) => {
+    setFocusedField(fieldName);
+  };
+  
+  const handleBlur = () => {
+    setFocusedField(null);
+  };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
       <div className="staggered-animation">
@@ -79,8 +88,8 @@ export default function FeedbackForm() {
             type="text"
             id="name"
             placeholder=" "
-            onFocus={() => setFocusedField("name")}
-            onBlur={() => setFocusedField(null)}
+            onFocus={() => handleFocus("name")}
+            onBlur={handleBlur}
             className={`w-full rounded-lg border ${
               errors.name ? "border-red-500" : focusedField === "name" ? "border-blue-500 shadow-md" : "border-gray-300"
             } bg-white p-4 pt-6 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400/50 dark:border-gray-600 dark:bg-gray-800 transition-all duration-300`}
@@ -105,8 +114,8 @@ export default function FeedbackForm() {
             type="email"
             id="email"
             placeholder=" "
-            onFocus={() => setFocusedField("email")}
-            onBlur={() => setFocusedField(null)}
+            onFocus={() => handleFocus("email")}
+            onBlur={handleBlur}
             className={`w-full rounded-lg border ${
               errors.email ? "border-red-500" : focusedField === "email" ? "border-blue-500 shadow-md" : "border-gray-300"
             } bg-white p-4 pt-6 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400/50 dark:border-gray-600 dark:bg-gray-800 transition-all duration-300`}
@@ -131,8 +140,8 @@ export default function FeedbackForm() {
             id="message"
             rows={4}
             placeholder=" "
-            onFocus={() => setFocusedField("message")}
-            onBlur={() => setFocusedField(null)}
+            onFocus={() => handleFocus("message")}
+            onBlur={handleBlur}
             className={`w-full rounded-lg border ${
               errors.message ? "border-red-500" : focusedField === "message" ? "border-blue-500 shadow-md" : "border-gray-300"
             } bg-white p-4 pt-6 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400/50 dark:border-gray-600 dark:bg-gray-800 transition-all duration-300`}
